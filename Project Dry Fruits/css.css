@@ -1,0 +1,51 @@
+header{
+	border: green thin solid;
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+article{
+	width: 70%;
+	border: green thin solid
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+aside{
+	width: 15%;
+	border: green thin solid;
+	height: 900px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+nav{
+	border: green thin solid;
+	width: 100%;
+	height: 20px;
+	box-sizing: border-box;
+	float: left;
+}
+nav a{
+	width: 16.6667%;
+	border: green thin solid;
+	height: 20px;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+	text-decoration: none;
+}
+footer{
+	width: 100%;
+	border: green thin solid;
+	height: 50px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+.product {width: 45.5%; float: left;border: green thin solid; margin-left: 3%; height: 400px; margin-top: 25px; border-radius: 10px}
+.product .name{text-align: center;font-weight: bold}
+.product .price {text-align: center;}
+.product .order {text-align: center;}
