@@ -13,11 +13,13 @@
 <body>
 	<section class="wrapper">
 		<header></header>
-		<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top"><?php include'menu_top.php'?></nav>
-		<section class="main">
-			<aside style="float: left;width: 10%;"></aside>
-			<article><?php include'get_request.php'?></article>
-			<aside style="float: right;width: 10%;"></aside>
+		<nav class="navbar navbar-expand-xl bg-light navbar-light fixed-top"><?php include'menu_top.php'?></nav>
+		<section class="container-fluid">
+			<section class="row">
+				<aside class="col-xl-1"></aside>
+				<article class="col-xl-10"><?php include'get_request.php'?></article>
+				<aside class="col-xl-1"></aside>
+			</section>	
 		</section>
 		<footer></footer>
 	</section>

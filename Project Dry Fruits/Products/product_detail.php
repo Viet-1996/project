@@ -5,10 +5,10 @@
 ?>
 <h1>Chi tiết sản phẩm</h1>
 <section>
-	<section><img src="img/<?=$result['image']?>"></section>
+	<section><img class="img-fluid" src="img/<?=$result['image']?>"></section>
 	<section>...</section>
 	<section><?=$result['description']?></section>
-	<h2>Bình luận cho sản phẩm</h2>
+<!-- 	<h2>Bình luận cho sản phẩm</h2>
 	<?php if(mysqli_num_rows($comments)==0):?>
 		<section>Không có bình luận nào!</section>
 	<?php else:?>
@@ -16,5 +16,5 @@
 		<h3><?=$item['name']?></h3>
 		<section><?=$item['content']?></section>
 	<?php endforeach;?>
-	<?php endif;?>
+	<?php endif;?> -->
 </section>
