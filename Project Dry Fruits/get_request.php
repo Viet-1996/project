@@ -17,7 +17,7 @@
 				include'register.php';
 				break;
 			case'productdetail':
-				include'product/product_detail.php';
+				include'products/product_detail.php';
 				break;
 			case'search':
 				include'search_product.php';
