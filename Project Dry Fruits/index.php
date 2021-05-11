@@ -15,11 +15,11 @@
 		<header></header>
 		<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top"><?php include'menu_top.php'?></nav>
 		<section class="main">
-			<aside><?php include'left.php';?></aside>
+			<aside style="float: left;width: 10%;"></aside>
 			<article><?php include'get_request.php'?></article>
-			<aside><?php include'right.php'?></aside>
+			<aside style="float: right;width: 10%;"></aside>
 		</section>
-		<footer><?php include'footer.php'?></footer>
+		<footer></footer>
 	</section>
 </body>
 </html>
