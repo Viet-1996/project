@@ -1,4 +1,4 @@
-<img class="navbar-brand" src="logoproject.png" style="max-width: 100px;max-height: 100px">
+<img class="navbar-brand" src="img/logoproject.png" style="max-width: 100px;max-height: 100px">
 <ul class="navbar-nav">
 	<li class="nav-item"><a class="nav-link" href="?option=introduce">Giới thiệu</a></li>
 	<li class="nav-item dropdown">
