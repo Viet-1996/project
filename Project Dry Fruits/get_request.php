@@ -2,13 +2,13 @@
 	if(isset($_GET['option'])){
 		switch($_GET['option']){
 			case'news':
-				include '../news/news.php';
+				include 'news/tintuc.php';
 				break;
 			case'collection':
-				include '../collection/collection.php';
+				include 'collection/bosuutap.php';
 				break;
 			case'contact':
-				include '../contact/contact.php';
+				include 'contact/contact.php';
 				break;
 			case'signin':
 				include'signin.php';
@@ -17,7 +17,7 @@
 				include'register.php';
 				break;
 			case'productdetail':
-				include'../product/product_detail.php';
+				include'product/product_detail.php';
 				break;
 			case'search':
 				include'search_product.php';
