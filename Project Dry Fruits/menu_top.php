@@ -1,5 +1,5 @@
 <section class="col-xl-2"></section>
-<a href="home.php"><img class="navbar-brand img-fluid" src="img/logoproject.png" width="100" height="80"></a>
+<a href="?option=home"><img class="navbar-brand img-fluid" src="img/logoproject.png" width="100" height="80"></a>
 <ul class="navbar-nav">
 	<li class="nav-item"><a class="nav-link" href="?option=introduce">Giới thiệu</a></li>
 	<li class="nav-item dropdown">
