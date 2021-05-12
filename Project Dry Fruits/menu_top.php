@@ -31,12 +31,12 @@
 	<li class="nav-item"><a class="nav-link" href="?option=register">Đăng kí</a></li>
 	<?php }else{
 ?>
-<li class="nav-item"><section>
+<li class="nav-item"><section class="nav-link">
 	Hello: <?=$_SESSION['customer']?> 
 </section></li>
-<li class="nav-item"><section class="nav-link">
-	<a href="?option=logout">Logout</a>
-</section></li>
+<li class="nav-item">
+	<a href="?option=logout" class="nav-link">Logout</a>
+</li>
 <?php
 	}
 ?>
