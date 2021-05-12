@@ -1,4 +1,5 @@
 <?php
+	$id=$_GET['id'];
 	$query="select*from product where id=".$_GET['id'];
 	$result=$connect->query($query);
 	$result=mysqli_fetch_array($result);
@@ -16,7 +17,7 @@
 		<section>Không có bình luận nào!</section>
 	<?php else:?>
 	<?php foreach($comments as $item):?>
-		<h3><?=$item['name']?></h3>
+		<h3><?=$item['fullname']?></h3>
 		<section><?=$item['content']?></section>
 	<?php endforeach;?>
 	<?php endif;?> 
@@ -29,6 +30,8 @@
 				<section><input type="submit" value="Gửi"></section>
 			</form>
 		</section>
+	<?php else:?>
+		<section>Bạn hãy <a href="signin.php">đăng nhập</a> để bình luận</section>
 	<?php endif;?>
 </section>
 

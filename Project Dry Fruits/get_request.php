@@ -21,6 +21,7 @@
 					addComment();
 					$alert=1;
 				}
+				$product=getProductById();
 				$comments=getCommentByProductId($product['id']);
 				include'products/product_detail.php';
 				break;

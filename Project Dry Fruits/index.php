@@ -30,7 +30,7 @@
 <?php
 	function addComment(){
 		global $connect;
-		$customer="select id from customer where username='".$SESSION['username']."'";
+		$customer="select id from customer where username='".$_SESSION['customer']."'";
 		$customer=$connect->query($customer);
 		$customer=mysqli_fetch_array($customer);
 		$customerId=$customer['id'];
@@ -45,6 +45,15 @@
 		global $connect;
 		$query="select*from customer a join comments b on a.id=b.customerId where productId=$productId and b.status";
 		$result=$connect->query($query);
+		return $result;
+	}
+
+	function getProductById(){
+		global $connect;
+		$id=$_GET['id'];
+		$query="select*from product where id=".$_GET['id'];
+		$result=$connect->query($query);
+		$result=mysqli_fetch_array($result);
 		return $result;
 	}
 ?>
