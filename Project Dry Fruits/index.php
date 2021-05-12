@@ -25,3 +25,26 @@
 	</section>
 </body>
 </html>
+
+
+<?php
+	function addComment(){
+		global $connect;
+		$customer="select id from customer where username='".$SESSION['username']."'";
+		$customer=$connect->query($customer);
+		$customer=mysqli_fetch_array($customer);
+		$customerId=$customer['id'];
+		$productId=$_GET['id'];
+		$content=$_POST['content'];
+		$query="insert comments(customerId,productId,date,content) values('$customerId','$productId',now(),'$content')";
+		$connect->query($query);
+		return 1;
+	}
+
+	function getCommentByProductId($productId){
+		global $connect;
+		$query="select*from customer a join comments b on a.id=b.customerId where productId=$productId and b.status";
+		$result=$connect->query($query);
+		return $result;
+	}
+?>

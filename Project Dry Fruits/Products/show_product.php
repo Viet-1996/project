@@ -8,3 +8,12 @@
 		</section>
 	<?php endforeach; ?>
 </section>
+
+<?php
+	function getCommentByProductId($productId){
+		global $connect;
+		$query="select*from customer a join comments b on a.id=b.customerId where productId=$productId and b.status";
+		$result=$connect->query($query);
+		return $result;
+	}
+?>

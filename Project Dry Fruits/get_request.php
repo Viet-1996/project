@@ -17,6 +17,11 @@
 				include'register.php';
 				break;
 			case'productdetail':
+				if(isset($_POST['content'])){
+					addComment();
+					$alert=1;
+				}
+				$comments=getCommentByProductId($product['id']);
 				include'products/product_detail.php';
 				break;
 			case'search':

@@ -1,4 +1,4 @@
-<img class="navbar-brand img-fluid" src="img/logoproject.png" width="100" height="80">
+<a href="home.php"><img class="navbar-brand img-fluid" src="img/logoproject.png" width="100" height="80"></a>
 <ul class="navbar-nav">
 	<li class="nav-item"><a class="nav-link" href="?option=introduce">Giới thiệu</a></li>
 	<li class="nav-item dropdown">
@@ -10,7 +10,7 @@
 			<a class="dropdown-item" href="products/trathaomoc.php">Trà thảo mộc</a>
 		</section>
 	</li>
-	<li class="nav-item">
+	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" href="?option=news" id="navbardrop" data-toggle="dropdown">Tin tức</a>
 		<section class="dropdown-menu">
 			<a class="dropdown-item" href="news/khuyenmai.php">Khuyến mại</a>
@@ -18,7 +18,7 @@
 		</section>
 	</li>
 	<li class="nav-item"><a class="nav-link" href="?option=colection" >Bộ sưu tập</a></li>
-	<li class="nav-item">
+	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" href="?option=contact" id="navbardrop" data-toggle="dropdown">Hỗ trợ</a>
 		<section class="dropdown-menu">
 			<a class="dropdown-item" href="contact/chinhsachquydinh.php">Chính sách & quy định</a>
@@ -27,8 +27,8 @@
 		</section>
 	</li>
 <?php if(empty($_SESSION['customer'])){?>
-	<li class="nav-item"><a class="nav-link" href="?option=signin">Đăng kí</a></li>
-	<li class="nav-item"><a class="nav-link" href="?option=register">Đăng nhập</a></li>
+	<li class="nav-item"><a class="nav-link" href="?option=signin">Đăng nhập</a></li>
+	<li class="nav-item"><a class="nav-link" href="?option=register">Đăng kí</a></li>
 	<?php }else{
 ?>
 <li class="nav-item"><section>
