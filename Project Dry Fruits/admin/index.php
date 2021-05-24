@@ -4,6 +4,7 @@
 <head>
 	<title>Admin</title>
 	<meta charset="utf-8">
+	<script src="../ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <?php

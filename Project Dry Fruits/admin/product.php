@@ -23,9 +23,9 @@
 				<td><?=$item['id']?></td>
 				<td><?=$item['name']?></td>
 				<td><?=$item['price']?></td>
-				<td><?=$item['image']?></td>
+				<td><img src="../img/<?=$item['image']?>" width=25%></td>
 				<td><?=$item['description']?></td>
-				<td><?=$item['producttypeid']?></td>
+				<td style="text-align: center;"><?=$item['producttypeid']?></td>
 				<td><?=$item['status']==1?'Active':'InActive'?></td>
 				<td><a href="?option=updateproduct&id=<?=$item['id']?>">Update</a> | <a onclick="return confirm('Are you sure');" href="?option=deleteproduct&id=<?=$item['id']?>">Delete</a></td>
 			</tr>
