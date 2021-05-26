@@ -5,10 +5,13 @@
 	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" href="products/sanpham.php" id="navbardrop" data-toggle="dropdown">Sản phẩm</a>
 		<section class="dropdown-menu">
-			<a class="dropdown-item" href="products/hatsay.php">Hạt sấy</a>
-			<a class="dropdown-item" href="products/hoaquasaygion.php">Hoa quả sấy giòn</a>
-			<a class="dropdown-item" href="products/hoaquasaydeo.php">Hoa quả sấy dẻo</a>
-			<a class="dropdown-item" href="products/trathaomoc.php">Trà thảo mộc</a>
+		<?php
+			$query="select*from producttype where status = 1";
+			$producttypes=$connect->query($query);
+			foreach ($producttypes as $item):
+		?>
+			<a class="dropdown-item" href="?option=search&producttypeid=<?=$item['id']?>"><?=$item['name']?></a>
+		<?php endforeach; ?>
 		</section>
 	</li>
 	<li class="nav-item dropdown">

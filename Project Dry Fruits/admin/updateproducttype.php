@@ -18,17 +18,17 @@
 	$result=$connect->query($query);
 	$result=mysqli_fetch_array($result);
 ?>
-<h1>Sửa loại sản phẩm</h1>
+<h1 style="text-align: center;">Sửa loại sản phẩm</h1>
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="POST">
 		<table>
 			<tr>
-				<td><label>Name: </label></td>
+				<td><label>Tên: </label></td>
 				<td><input type="text" name="name" value="<?=$result['name']?>"></td>
 			</tr>
 			<tr>
-				<td><label>Status:</label></td>
+				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" <?=$result['status']==1?'checked':''?>>Active <input type="radio" name="status" value="0" <?=$result['status']==0?'checked':''?>> InActive</td>
 			</tr>
 			<tr>

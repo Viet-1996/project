@@ -16,43 +16,43 @@
 		if(mysqli_num_rows($result)==1){
 			$alert="Tên sản phẩm đã tồn tại. Đề nghị chọn tên khác.";
 		} else{
-				if($ext=='JPG'||$ext=='jpg'||$ext1=='JPEG'||$ext1=='jpeg'||$ext=='GIF'||$ext=='gif'||$ext=='BMP'||$ext=='bmp'||$ext=='PNG'||$ext=='png'){
-					move_uploaded_file($fileTemp, $folder.$imageName);
-					$status=$_POST['status'];
-					$query="insert product (name,price,image,description,producttypeid,status) values('$name','$price','$imageName','$description','$producttypeid','$status')";
-					$connect->query($query);
-					header("location: ?option=product");
-				} else {
-					echo"Ảnh không đúng định dạng";
+			if($ext=='JPG'||$ext=='jpg'||$ext1=='JPEG'||$ext1=='jpeg'||$ext=='GIF'||$ext=='gif'||$ext=='BMP'||$ext=='bmp'||$ext=='PNG'||$ext=='png'){
+				move_uploaded_file($fileTemp, $folder.$imageName);
+				$status=$_POST['status'];
+				$query="insert product (name,price,image,description,producttypeid,status) values('$name','$price','$imageName','$description','$producttypeid','$status')";
+				$connect->query($query);
+				header("location: ?option=product");
+			} else {
+				echo"Ảnh không đúng định dạng";
 			}
 		}
 	}
 ?>
-<h1>Thêm sản phẩm</h1>
+<h1 style="text-align: center;">Thêm sản phẩm</h1>
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="POST" enctype="multipart/form-data">
 		<table>
 			<tr>
-				<td><label>Name: </label></td>
+				<td><label>Tên: </label></td>
 				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
-				<td><label>Price: </label></td>
+				<td><label>Giá cả: </label></td>
 				<td><input type="number" name="price" min="0" step="1000"></td>
 			</tr>
 			<tr>
-				<td><label>Image: </label></td>
+				<td><label>Ảnh: </label></td>
 				<td><input type="file" name="image"></td>
 			</tr>
 			<tr>
-				<td><label>Description: </label></td>
+				<td><label>Mô tả: </label></td>
 				<td><textarea name="description" id="description"></textarea><script>CKEDITOR.replace("description");</script></td>
 			</tr>
 			<tr>
-				<td><label>Product Type</label></td>
+				<td><label>Loại sản phẩm</label></td>
 				<td><select name="producttypeid">
-					<option hidden>--Choose product type--</option>
+					<option hidden>--Chọn loại sản phẩm--</option>
 					<?php
 						$query="select*from producttype";
 						$result=$connect->query($query);
@@ -63,11 +63,12 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td><label>Status:</label></td>
+				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" checked>Active <input type="radio" name="status" value="0"> InActive</td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="add"></td>
+				<td></td>
+				<td><input type="submit" value="Thêm"></td>
 			</tr>
 		</table>
 	</form>

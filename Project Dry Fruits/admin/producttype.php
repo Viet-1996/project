@@ -2,24 +2,24 @@
 	$query="select*from producttype";
 	$result=$connect->query($query);
 ?>
-<h1>Loại sản phẩm</h1>
-<section style="text-align: center;margin-bottom: 10px;"><a href="?option=addproducttype" style="background-color: #eee; text-decoration: none; padding: 5px;border-radius: 5px">Add Producttype</a></section>
+<h1 style="text-align: center;">Loại sản phẩm</h1>
+<section style="text-align: center;margin-bottom: 10px;"><a href="?option=addproducttype" style="background-color: #eee; text-decoration: none; padding: 5px;border-radius: 5px">Thêm loại sản phẩm</a></section>
 <table width="100%" border="1" cellspacing="0" cellpadding="0">
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th>Name</th>
-			<th>Status</th>
-			<th>Action</th>
+			<th>Tên</th>
+			<th>Trạng thái</th>
+			<th>Hành động</th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php foreach ($result as $item): ?>
-			<tr>
+			<tr style="text-align: center;">
 				<td><?=$item['id']?></td>
 				<td><?=$item['name']?></td>
 				<td><?=$item['status']==1?'Active':'InActive'?></td>
-				<td><a href="?option=updateproducttype&id=<?=$item['id']?>">Update</a> | <a onclick="return confirm('Are you sure');" href="?option=deleteproducttype&id=<?=$item['id']?>">Delete</a></td>
+				<td><a href="?option=updateproducttype&id=<?=$item['id']?>">Chỉnh sửa</a> | <a onclick="return confirm('Are you sure');" href="?option=deleteproducttype&id=<?=$item['id']?>">Xóa</a></td>
 			</tr>
 		<?php endforeach;?>
 	</tbody>

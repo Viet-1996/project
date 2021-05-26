@@ -13,17 +13,17 @@
 		}
 	}
 ?>
-<h1>Thêm loại sản phẩm</h1>
+<h1 style="text-align: center;">Thêm loại sản phẩm</h1>
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="POST">
 		<table>
 			<tr>
-				<td><label>Name: </label></td>
+				<td><label>Tên: </label></td>
 				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
-				<td><label>Status:</label></td>
+				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" checked>Active <input type="radio" name="status" value="0"> InActive</td>
 			</tr>
 			<tr>

@@ -1,10 +1,10 @@
 <table width="100%" border="1" cellpadding="0" cellspacing="0">
-	<tr>
-		<td width="20%">Hello: <?=$_SESSION['admin']?>[<a href="?option=logoutadmin" style="float: right;">Logout</a>]</td>
+	<tr style="text-align: center;">
+		<td width="15%" height="30px">Xin chào: <?=$_SESSION['admin']?><a href="?option=logoutadmin" style="float: right;text-decoration: none;">[Logout]</a></td>
 		<td>TRANG QUẢN TRỊ ADMIN</td>
 	</tr>
 	<tr>
-		<td>
+		<td style="text-align: center;">
 			<section><a href="?option=producttype" style="text-decoration: none;cursor: hand">>>>Loại sản phẩm</a></section>
 			<section><a href="?option=product" style="text-decoration: none;cursor: hand">>>>Sản phẩm</a></section>
 			<section>>>>Khách hàng</section>

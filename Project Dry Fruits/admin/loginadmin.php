@@ -22,10 +22,10 @@
 <section>
 	<form method="post">
 		<section>
-			<label>Username: </label> <input type="text" name="username" required>
+			<label>Tên tài khoản: </label> <input type="text" name="username" required>
 		</section>
 		<section>
-			<label>Password: </label><input type="password" name="password" required>
+			<label>Mật khẩu: </label><input type="password" name="password" required>
 		</section>
 		<section>
 			<input type="submit" value="Đăng nhập">

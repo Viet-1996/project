@@ -1,4 +1,4 @@
-<?php session_start(); $connect = new MySQLi("localhost","root","","project");?>
+<?php session_start(); $connect = new MySQLi("localhost","root","","project"); mysqli_set_charset($connect,'UTF8');?>
 <!DOCTYPE html>
 <html>
 <head>
