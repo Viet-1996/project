@@ -1,13 +1,24 @@
-<table width="100%" border="1" cellpadding="0" cellspacing="0">
+<?php
+	$ChuaXuLi=mysqli_num_rows($connect->query("select*from orders where status=1"));
+	$DangXuLi=mysqli_num_rows($connect->query("select*from orders where status=2"));
+	$DaXuLi=mysqli_num_rows($connect->query("select*from orders where status=3"));
+	$Huy=mysqli_num_rows($connect->query("select*from orders where status=4"));
+?>
+
+<table class="table table-responsive table-bordered">
 	<tr style="text-align: center;">
 		<td width="15%" height="30px">Xin chào: <?=$_SESSION['admin']?><a href="?option=logoutadmin" style="float: right;text-decoration: none;">[Logout]</a></td>
 		<td>TRANG QUẢN TRỊ ADMIN</td>
 	</tr>
 	<tr>
-		<td style="text-align: center;">
-			<section><a href="?option=producttype" style="text-decoration: none;cursor: hand">>>>Loại sản phẩm</a></section>
-			<section><a href="?option=product" style="text-decoration: none;cursor: hand">>>>Sản phẩm</a></section>
-			<section>>>>Khách hàng</section>
+		<td>
+			<section style="margin-top: 20px"><a href="?option=producttype" style="text-decoration: none;cursor: hand">>>>Loại sản phẩm</a></section>
+			<section style="margin-top: 20px"><a href="?option=product" style="text-decoration: none;cursor: hand">>>>Sản phẩm</a></section>
+			<section style="margin-top: 20px">>>>Đơn hàng</section>
+			<section><a href="?option=order&status=1" style="text-decoration: none;cursor: hand">&nbsp;&nbsp;>>Đơn hàng chưa xử lí[<span style="color: red"><?=$ChuaXuLi?></span>]</a></section>
+			<section><a href="?option=order&status=2" style="text-decoration: none;cursor: hand">&nbsp;&nbsp;>>Đơn hàng đang xử lí[<span style="color: red"><?=$DangXuLi?></span>]</a></section>
+			<section><a href="?option=order&status=3" style="text-decoration: none;cursor: hand">&nbsp;&nbsp;>>Đơn hàng đã xử lí[<span style="color: red"><?=$DaXuLi?></span>]</a></section>
+			<section><a href="?option=order&status=4" style="text-decoration: none;cursor: hand">&nbsp;&nbsp;>>Đơn hàng đã hủy[<span style="color: red"><?=$Huy?></span>]</a></section>
 		</td>
 		<td>
 			<?php
@@ -50,6 +61,12 @@
 								$connect->query("delete from producttype where id=".$_GET['id']);
 							}
 							header("location: ?option=producttype");
+							break;
+						case 'order':
+							include"showorder.php";
+							break;
+						case 'orderdetail':
+							include"orderdetail.php";
 							break;
 						case'logoutadmin':
 							unset($_SESSION['admin']);

@@ -32,7 +32,7 @@
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="POST" enctype="multipart/form-data">
-		<table>
+		<table class="table table-borderless">
 			<tr>
 				<td><label>Tên: </label></td>
 				<td><input type="text" name="name"></td>

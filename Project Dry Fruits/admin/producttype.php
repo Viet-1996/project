@@ -4,7 +4,7 @@
 ?>
 <h1 style="text-align: center;">Loại sản phẩm</h1>
 <section style="text-align: center;margin-bottom: 10px;"><a href="?option=addproducttype" style="background-color: #eee; text-decoration: none; padding: 5px;border-radius: 5px">Thêm loại sản phẩm</a></section>
-<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>ID</th>

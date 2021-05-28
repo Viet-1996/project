@@ -21,14 +21,19 @@
 <section><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="post">
-		<section>
-			<label>Tên tài khoản: </label> <input type="text" name="username" required>
-		</section>
-		<section>
-			<label>Mật khẩu: </label><input type="password" name="password" required>
-		</section>
-		<section>
-			<input type="submit" value="Đăng nhập">
-		</section>
+		<table>
+			<tr>
+				<td><label>Tên tài khoản: </label></td>
+				<td><input type="text" name="username" required></td>
+			</tr>
+			<tr>
+				<td><label>Mật khẩu: </label></td>
+				<td><input type="password" name="password" required></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Đăng nhập"></td>
+			</tr>
+		</table>
 	</form>
 </section>

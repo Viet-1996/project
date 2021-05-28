@@ -17,16 +17,17 @@
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
 	<form method="POST">
-		<table>
+		<table class="table table-borderless">
 			<tr>
 				<td><label>Tên: </label></td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name" style="width: 90%"></td>
 			</tr>
 			<tr>
 				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" checked>Active <input type="radio" name="status" value="0"> InActive</td>
 			</tr>
 			<tr>
+				<td></td>
 				<td><input type="submit" value="add"></td>
 			</tr>
 		</table>
