@@ -21,7 +21,7 @@
 			<a class="dropdown-item" href="new/tintuc.php">Tin tức</a>
 		</section>
 	</li>
-	<li class="nav-item"><a class="nav-link" href="?option=colection" >Bộ sưu tập</a></li>
+	<li class="nav-item"><a class="nav-link" href="?option=cart" >Giỏ hàng</a></li>
 	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" href="?option=contact" id="navbardrop" data-toggle="dropdown">Hỗ trợ</a>
 		<section class="dropdown-menu">

@@ -3,7 +3,7 @@
 	$result=$connect->query($query);
 ?>
 <h1 style="text-align: center;">Loại sản phẩm</h1>
-<section style="text-align: center;margin-bottom: 10px;"><a href="?option=addproducttype" style="background-color: #eee; text-decoration: none; padding: 5px;border-radius: 5px">Thêm loại sản phẩm</a></section>
+<section class="btn btn-success" style="margin-left: 43%;"><a href="?option=addproducttype" style="color:white;">Thêm loại sản phẩm</a></section>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>

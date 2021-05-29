@@ -1,11 +1,17 @@
 <?php
 	if(isset($_GET['option'])){
 		switch($_GET['option']){
+			case'home':
+				include'home.php';
+				break;
+			case'cart':
+				include 'cart.php';
+				break;
 			case'news':
 				include 'news/tintuc.php';
 				break;
-			case'collection':
-				include 'collection/bosuutap.php';
+			case'cart.php':
+				include 'cart.php';
 				break;
 			case'contact':
 				include 'contact/contact.php';
@@ -26,7 +32,7 @@
 				include'products/product_detail.php';
 				break;
 			case'search':
-				include'search_product.php';
+				include'products/show_product.php';
 				break;
 			case 'logout':
 				unset($_SESSION['customer']);

@@ -31,9 +31,7 @@
 				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" <?=$result['status']==1?'checked':''?>>Active <input type="radio" name="status" value="0" <?=$result['status']==0?'checked':''?>> InActive</td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="update"></td>
-			</tr>
 		</table>
+		<input type="submit" value="update" class="btn btn-primary">
 	</form>
 </section>

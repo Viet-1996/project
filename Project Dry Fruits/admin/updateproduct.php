@@ -5,6 +5,7 @@
 		$price=$_POST['price'];
 		$description=$_POST['description'];
 		$producttypeid=$_POST['producttypeid'];
+		$image=$result['image'];
 		$status=$_POST['status'];
 		$fileName=$_FILES['image']['name'];
 		$fileTemp=$_FILES['image']['tmp_name'];
@@ -78,10 +79,7 @@
 				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" <?=$result['status']==1?'checked':''?>>Active <input type="radio" name="status" value="0" <?=$result['status']==0?'checked':''?>> InActive</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Chỉnh sửa"></td>
-			</tr>
 		</table>
+		<input type="submit" value="Chỉnh sửa" class="btn btn-primary">
 	</form>
 </section>

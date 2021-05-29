@@ -3,7 +3,7 @@
 	$result=$connect->query($query);
 ?>
 <h1 style="text-align: center;">Sản phẩm</h1>
-<section style="text-align: center;margin-bottom: 10px;"><a href="?option=addproduct" style="background-color: #eee; text-decoration: none; padding: 5px;border-radius: 5px">Thêm sản phẩm</a></section>
+<section class="btn btn-success" style="margin-left: 43%;"><a href="?option=addproduct" style="color:white;">Thêm sản phẩm</a></section>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
@@ -23,7 +23,7 @@
 				<td><?=$item['id']?></td>
 				<td><?=$item['name']?></td>
 				<td><?=$item['price']?></td>
-				<td><img src="../img/<?=$item['image']?>" width=25%></td>
+				<td><img src="../img/<?=$item['image']?>"></td>
 				<td><?=$item['description']?></td>
 				<td><?=$item['producttypeid']?></td>
 				<td><?=$item['status']==1?'Active':'InActive'?></td>

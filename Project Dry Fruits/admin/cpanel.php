@@ -40,6 +40,7 @@
 								$connect->query("update product set status=0 where id=".$_GET['id']);
 							} else{
 								$connect->query("delete from product where id=".$_GET['id']);
+								unlink("../img/".$_GET['image']);
 							}
 							header("location: ?option=product");
 							break;

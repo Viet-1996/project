@@ -30,3 +30,17 @@ footer{
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
+.highlight{
+	color: gray;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.pages{
+	width: 100%;
+	float: left;
+	background: white;
+	text-align: center;
+	margin-top: 20px;
+}

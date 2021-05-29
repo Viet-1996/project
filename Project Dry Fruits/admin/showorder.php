@@ -1,4 +1,13 @@
 <?php
+	if(isset($_GET['id'])){
+		$id=$_GET['id'];
+		$connect->query("delete from orderdetail where orderid=$id");
+		$connect->query("delete from orders where id=$id");
+		header("location: ?option=order&status=4");
+	}
+?>
+
+<?php
 	$status=$_GET['status'];
 	$query="select*from orders where status=$status";
 	$result=$connect->query($query);
@@ -21,7 +30,7 @@
 				<td><?=$count++?></td>
 				<td><?=$item['id']?></td>
 				<td><?=$item['orderdate']?></td>
-				<td><a href="?option=orderdetail&id=<?=$item['id']?>">Chi tiết đơn hàng</a> | <a style="display:<?$status==4?'block':'none';?>" onclick="return confirm('Are you sure');" href="?option=deleteorder&id=<?=$item['id']?>">Xóa</a></td>
+				<td><a href="?option=orderdetail&id=<?=$item['id']?>">Chi tiết đơn hàng</a> | <a style="display:<?$status==4?'block':'none';?>" onclick="return confirm('Are you sure');" href="?option=order&id=<?=$item['id']?>">Xóa</a></td>
 			</tr>
 		<?php endforeach;?>
 	</tbody>

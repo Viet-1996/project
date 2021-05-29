@@ -66,10 +66,7 @@
 				<td><label>Trạng thái:</label></td>
 				<td><input type="radio" name="status" value="1" checked>Active <input type="radio" name="status" value="0"> InActive</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Thêm"></td>
-			</tr>
 		</table>
+		<input type="submit" value="Thêm" class="btn btn-success">
 	</form>
 </section>
