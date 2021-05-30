@@ -17,9 +17,9 @@
 		}
 	}
 ?>
-<h1>Đăng nhập tài khoản</h1>
+<h1 style="text-align:center;">Đăng nhập tài khoản</h1>
 <section><?=isset($alert)?$alert:""?></section>
-<section>
+<section style="margin-left: 40%;">
 	<form method="post">
 		<table>
 			<tr>

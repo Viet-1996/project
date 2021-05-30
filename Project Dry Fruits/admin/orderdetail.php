@@ -2,7 +2,7 @@
 	if(isset($_POST['status'])){
 		$connect->query("update orders set status=".$_POST['status']." where id=".$_GET['id']);
 	}
-	header("refresh:0");
+	header("refresh:");
 ?>
 
 <?php

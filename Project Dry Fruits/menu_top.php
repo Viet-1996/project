@@ -3,7 +3,7 @@
 <ul class="navbar-nav">
 	<li class="nav-item"><a class="nav-link" href="?option=introduce">Giới thiệu</a></li>
 	<li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="products/sanpham.php" id="navbardrop" data-toggle="dropdown">Sản phẩm</a>
+		<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Sản phẩm</a>
 		<section class="dropdown-menu">
 		<?php
 			$query="select*from producttype where status = 1";
@@ -14,20 +14,12 @@
 		<?php endforeach; ?>
 		</section>
 	</li>
-	<li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="?option=news" id="navbardrop" data-toggle="dropdown">Tin tức</a>
-		<section class="dropdown-menu">
-			<a class="dropdown-item" href="news/khuyenmai.php">Khuyến mại</a>
-			<a class="dropdown-item" href="new/tintuc.php">Tin tức</a>
-		</section>
-	</li>
 	<li class="nav-item"><a class="nav-link" href="?option=cart" >Giỏ hàng</a></li>
 	<li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="?option=contact" id="navbardrop" data-toggle="dropdown">Hỗ trợ</a>
+		<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Hỗ trợ</a>
 		<section class="dropdown-menu">
-			<a class="dropdown-item" href="contact/chinhsachquydinh.php">Chính sách & quy định</a>
-			<a class="dropdown-item" href="contact/diachi.php">Địa chỉ</a>
-			<a class="dropdown-item" href="contact/huongdanmuahang/php">Hướng dẫn mua hàng</a>
+			<a class="dropdown-item" href="?option=policy">Chính sách & quy định</a>
+			<a class="dropdown-item" href="?option=location">Địa chỉ</a>
 		</section>
 	</li>
 <?php if(empty($_SESSION['customer'])){?>

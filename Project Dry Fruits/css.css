@@ -6,16 +6,9 @@ article{
 
 footer{
 	width: 100%;
-	border: green thin solid;
-	height: 50px;
-	box-sizing: border-box;
-	float: left;
 	text-align: center;
 }
 .product {width: 25%; float: left; height: 400px; margin-top: 25px}
-.product .name{text-align: center;font-weight: bold}
-.product .price {text-align: center;}
-.product .order {text-align: center;}
 
 .dropdown {
 	position: relative;
@@ -43,4 +36,9 @@ footer{
 	background: white;
 	text-align: center;
 	margin-top: 20px;
+}
+footer{
+	width: 100%;
+	background-color: black;
+	height: 200px;
 }

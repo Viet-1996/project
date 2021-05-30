@@ -1,6 +1,15 @@
 <?php
 	if(isset($_GET['option'])){
 		switch($_GET['option']){
+			case'policy':
+				include'contact/policy.php';
+				break;
+			case'location':
+				include'contact/location.php';
+				break;
+			case'introduce':
+				include'introduce/introduce.php';
+				break;
 			case'home':
 				include'home.php';
 				break;

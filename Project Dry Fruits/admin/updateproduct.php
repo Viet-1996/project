@@ -27,7 +27,7 @@
 					echo"Ảnh không đúng định dạng";
 				}
 			}
-			$query="update product set name='$name', price='$price', image='$imageName', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
+			$query="update product set name='$name', price='$price', image='$image', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
 			$connect->query($query);
 			header("location: ?option=product");
 		}
@@ -60,7 +60,7 @@
 			</tr>
 			<tr>
 				<td><label>Mô tả: </label></td>
-				<td><textarea name="description" id="description"></textarea><script>CKEDITOR.replace("description");</script></td>
+				<td><textarea name="description" id="description"><?=$result['description']?></textarea><script>CKEDITOR.replace("description");</script></td>
 			</tr>
 			<tr>
 				<td><label>Loại sản phẩm: </label></td>

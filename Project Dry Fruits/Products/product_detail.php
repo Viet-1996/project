@@ -9,29 +9,37 @@
 <?php endif;?>
 <h1>Chi tiết sản phẩm</h1>
 <section>
-	<section><img class="img-fluid" src="img/<?=$result['image']?>"></section>
-	<section><?=$result['description']?></section>
- 	<h2 style="float: left;">Bình luận cho sản phẩm</h2><br><br>
-	<?php if(mysqli_num_rows($comments)==0):?>
-		<section style="float: left;">Không có bình luận nào!</section>
-	<?php else:?>
-	<?php foreach($comments as $item):?>	
-		<h3 style="float: left;text-indent: 10px;text-transform: capitalize;"><?=$item['fullname']?></h3><br><br>
-		<section style="float: left;text-transform: capitalize;"><?=$item['content']?></section><br>
-		<section style="float: left;"><i class="far fa-clock"></i> <?=$item['date']?></section>
-	<?php endforeach;?>
-	<?php endif;?> 
+	<table>
+		<tr>
+			<td style="width: 50%;"><section><img class="img-fluid" src="img/<?=$result['image']?>"></section></td>
+			<td style="width: 50%;"><section><?=$result['description']?></section></td>
+		</tr>
+	</table>
+	<table>
+		<tr><td><h2 style="margin-top: 50px;">Bình luận cho sản phẩm</h2></td></tr>
+		<?php if(mysqli_num_rows($comments)==0):?>
+		<tr><td><section>Không có bình luận nào!</section></td></tr>
+		<?php else:?>
+		<?php foreach($comments as $item):?>
+		<tr><td><h4 style="text-indent: 10px;text-transform: capitalize;float: left;"><?=$item['fullname']?></h4></td></tr>
+		<tr><td><section style="float: left;text-transform: capitalize;"><?=$item['content']?></section></td></tr>
+		<tr><td><section style="float: left;"><i class="far fa-clock"></i> <?=$item['date']?></section></td></tr>
+		<?php endforeach;?>
+		<?php endif;?> 
 	<?php if(isset($_SESSION['customer'])):?>
 		<hr>
-		<h2>Viết bình luận:</h2>
+		<tr><td><h2>Viết bình luận:</h2></td></tr>
 		<section>
 			<form method="post">
-				<section><textarea name="content" rows="3" cols="100" required></textarea></section>
-				<section><input type="submit" value="Gửi"></section>
+				<tr><td><textarea name="content" rows="3" cols="100" required></textarea></td></tr>
+				<tr><td><input type="submit" value="Gửi"></td></tr>
 			</form>
 		</section>
 	<?php else:?>
-		<section>Bạn hãy <a href=?option=signin>đăng nhập</a> để bình luận</section>
+		<tr><td>Bạn hãy <a href=?option=signin>đăng nhập</a> để bình luận</td></tr>
 	<?php endif;?>
 </section>
+	</table>
+			
+	
 
