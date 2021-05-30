@@ -27,7 +27,7 @@
 					echo"Ảnh không đúng định dạng";
 				}
 			}
-			$query="update product set name='$name', price='$price', image='$image', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
+			$query="update product set name='$name', price='$price', image='$imagename', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
 			$connect->query($query);
 			header("location: ?option=product");
 		}
