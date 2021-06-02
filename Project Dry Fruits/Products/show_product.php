@@ -37,6 +37,6 @@
 </section>
 <section class="pages">
 	<?php for($i=1; $i<=$totalPages; $i++):?>
-		<a class="highlight" href="<?=$option?>?page=<?=$i?>"><?=$i?></a>
+		<a class="highlight" href="<?=$option?>&page=<?=$i?>"><?=$i?></a>
 	<?php endfor;?>
 </section>

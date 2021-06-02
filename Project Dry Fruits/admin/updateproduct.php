@@ -1,4 +1,9 @@
 <?php
+	$query="select*from product where id=".$_GET['id'];
+	$result=$connect->query($query);
+	$result=mysqli_fetch_array($result);
+?>
+<?php
 	if(isset($_POST['name'])){
 		$name=$_POST['name'];
 		$query="select*from product where name='$name' and id!=".$_GET['id'];
@@ -27,17 +32,13 @@
 					echo"Ảnh không đúng định dạng";
 				}
 			}
-			$query="update product set name='$name', price='$price', image='$imagename', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
+			$query="update product set name='$name', price='$price', image='$imageName', description='$description', producttypeid='$producttypeid', status='$status' where id=".$_GET['id'];
 			$connect->query($query);
 			header("location: ?option=product");
 		}
 	}
 ?>
-<?php
-	$query="select*from product where id=".$_GET['id'];
-	$result=$connect->query($query);
-	$result=mysqli_fetch_array($result);
-?>
+
 <h1 style="text-align: center;">Sửa sản phẩm</h1>
 <section style="color: red"><?=isset($alert)?$alert:""?></section>
 <section>
@@ -71,7 +72,7 @@
 						$producttype=$connect->query($query);
 					?>
 					<?php foreach($producttype as $item):?>
-						<option value="<?=$item['id']?>"><?=$item['name']?></option>
+						<option value="<?=$item['id']?>" <?=$item['id']==$result['id']?'selected':''?>><?=$item['name']?></option>
 					<?php endforeach;?></select>
 				</td>
 			</tr>
