@@ -6,7 +6,7 @@
 	<tr>
 		<td><img src="img/han-che-1-510x383.jpg"></td>
 		<td><h3 style="text-align: center;">Sứ Mệnh</h3><br>
-<i>Chúng tôi làm việc mỗi ngày để biến trải nghiệm ăn uống nông sản thực phẩm chế biến tại Lạc Thủy trở thành một phần của cuộc sống hàng ngày: ngon miệng, an tâm sức khoẻ, thuận tiện, giá cả hợp lý, dịch vụ hài lòng</i></td>
+<i>Chúng tôi làm việc mỗi ngày để biến trải nghiệm ăn uống nông sản thực phẩm chế biến tại Maru Dry Fruits trở thành một phần của cuộc sống hàng ngày: ngon miệng, an tâm sức khoẻ, thuận tiện, giá cả hợp lý, dịch vụ hài lòng</i></td>
 	</tr>
 	<tr>
 		<td colspan="2">Với phương châm “<i>hợp tác cùng phát triển</i>” Chúng tôi tin rằng trong thời gian tới sẽ có nhiều bạn hàng tin cậy, cùng hợp tác trên các lĩnh vực quan tâm. Về phía Chúng tôi luôn cố gắng hơn nữa, đáp ứng được lòng tin của khách hàng và gây dựng thương hiệu ngày càng vững mạnh, xứng đáng với niềm tin của quý khách hàng.!</td>

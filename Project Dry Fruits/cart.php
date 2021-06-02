@@ -61,9 +61,9 @@
 		?>
 		<tr>
 			<td width="20%"><img width="100%" src="img/<?=$item['image']?>"></td>
-			<td><?=$item['name']?><br><input type="button" value="Xóa" onclick="location='?option=cart&action=delete&id=<?=$item['id']?>';"></td>
+			<td><?=$item['name']?><br><input type="button" class="btn btn-danger" value="Xóa" onclick="location='?option=cart&action=delete&id=<?=$item['id']?>';"></td>
 			<td><?=number_format($item['price'],0,',','.')?></td>
-			<td><?=$_SESSION['cart'][$item['id']]?> <input type="button" value="+" onclick="location='?option=cart&action=update&type=asc&id=<?=$item['id']?>';"> <input type="button" value="-" onclick="location='?option=cart&action=update&type=desc&id=<?=$item['id']?>';"></td>
+			<td><?=$_SESSION['cart'][$item['id']]?> <input type="button" class="btn btn-outline-success" value="+" onclick="location='?option=cart&action=update&type=asc&id=<?=$item['id']?>';"> <input type="button" class="btn btn-outline-danger" value="-" onclick="location='?option=cart&action=update&type=desc&id=<?=$item['id']?>';"></td>
 			<td><?=number_format($subTotal=$item['price']*$_SESSION['cart'][$item['id']],0,',','.')?></td>
 			<?php $total+=$subTotal;?>
 		</tr>
@@ -71,7 +71,8 @@
 		<tr>
 			<td colspan="5">
 				<section>Tổng tiền (vnđ): <?=number_format($total,0,',','.')?></section>
-				<section><input type="button" value="Xóa giỏ hàng" onclick="if(confirm('Bạn có muốn xóa giỏ hàng không?')) location='?option=cart&action=deleteall';"> <input type="button" value="Đặt hàng" onclick="location='?option=cart&action=order"></section>
+				<section><input type="button" class="btn btn-outline-danger" value="Xóa giỏ hàng" onclick="if(confirm('Bạn có muốn xóa giỏ hàng không?')) location='?option=cart&action=deleteall';"> <input type="button" class="btn btn-outline-success" value="Đặt hàng" onclick="location='?option=cart&action=order"></section>
+				<section><a href="?option=home" class="btn btn-outline-warning">Quay lại</a></section>
 			</td>
 		</tr>
 	</table>

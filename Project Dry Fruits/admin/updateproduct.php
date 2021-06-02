@@ -81,5 +81,6 @@
 			</tr>
 		</table>
 		<input type="submit" value="Chỉnh sửa" class="btn btn-primary">
+		<a href="?option=product.php" class="btn btn-danger">Quay lại</a>
 	</form>
 </section>

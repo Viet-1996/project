@@ -28,5 +28,6 @@
 			</tr>
 		</table>
 		<input type="submit" value="Thêm" class="btn btn-success">
+		<a href="?option=producttype" class="btn btn-danger">Quay lại</a>
 	</form>
 </section>

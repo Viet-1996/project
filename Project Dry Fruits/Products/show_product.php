@@ -31,7 +31,7 @@
 			<section><a href="?option=productdetail&id=<?=$item['id']?>"><img src="img/<?=$item['image']?>"></a></section>
 			<section><a href="?option=productdetail&id=<?=$item['id']?>"><?=$item['name']?></a></section>
 			<section><?=number_format($item['price'],0,',','.')?> vnđ</section>
-			<section><input type="button" value="Đặt mua" onclick="location='?option=cart&action=add&id=<?=$item['id']?>';"></section>
+			<section><input type="button" class="btn btn-outline-success" value="Đặt mua" onclick="location='?option=cart&action=add&id=<?=$item['id']?>';"></section>
 		</section>
 	<?php endforeach; ?>
 </section>
