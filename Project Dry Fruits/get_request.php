@@ -19,9 +19,6 @@
 			case'news':
 				include 'news/tintuc.php';
 				break;
-			case'cart.php':
-				include 'cart.php';
-				break;
 			case'contact':
 				include 'contact/contact.php';
 				break;
@@ -30,6 +27,12 @@
 				break;
 			case'register':
 				include'register.php';
+				break;
+			case'order':
+				include'order.php';
+				break;
+			case'ordersuccess':
+				include'ordersuccess.php';
 				break;
 			case'productdetail':
 				if(isset($_POST['content'])){

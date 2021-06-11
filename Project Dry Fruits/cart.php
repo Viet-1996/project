@@ -30,7 +30,7 @@
 				header("location: ?option=cart");
 				break;
 			case 'order':
-				if(isset($_SESSION['member'])){
+				if(isset($_SESSION['customer'])){
 					header("location: ?option=order");
 				} else{
 					header("location: ?option=signin&order=1");
@@ -71,7 +71,7 @@
 		<tr>
 			<td colspan="5">
 				<section>Tổng tiền (vnđ): <?=number_format($total,0,',','.')?></section>
-				<section><input type="button" class="btn btn-outline-danger" value="Xóa giỏ hàng" onclick="if(confirm('Bạn có muốn xóa giỏ hàng không?')) location='?option=cart&action=deleteall';"> <input type="button" class="btn btn-outline-success" value="Đặt hàng" onclick="location='?option=cart&action=order"></section>
+				<section><input type="button" class="btn btn-outline-danger" value="Xóa giỏ hàng" onclick="if(confirm('Bạn có muốn xóa giỏ hàng không?')) location='?option=cart&action=deleteall';"> <input type="button" class="btn btn-outline-success" value="Đặt hàng" onclick="location='?option=cart&action=order';"></section>
 				<section><a href="?option=home" class="btn btn-outline-warning">Quay lại</a></section>
 			</td>
 		</tr>

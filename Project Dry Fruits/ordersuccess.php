@@ -1,0 +1,1 @@
+<br><h1 style="text-align: center;">BẠN ĐÃ ĐẶT HÀNG THÀNH CÔNG <br> CHÚNG TÔI SẼ LIÊN HỆ SỚM ĐỂ XÁC NHẬN ĐƠN HÀNG <br> XIN CẢM ƠN ĐÃ ĐẶT HÀNG TẠI MARU SHOP!</h1>

@@ -13,7 +13,11 @@
 				$alert="Tài khoản chưa được kích hoạt , xin vui lòng chờ trong giây lát";
 			} else {
 				$_SESSION['customer']=$username;
-				header("location: ?option=home");
+				if(isset($_GET['order'])){
+					header("location: ?option=order");
+				} else{
+					header("location: ?option=home");
+				}
 			}
 		}
 	}
